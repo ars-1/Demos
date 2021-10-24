@@ -39,6 +39,7 @@
         padding: 10px 20px 10px 20px;
         text-align: center;
         text-decoration: none;
+        transition: .5s;
     }
 </style>
 <body>
@@ -49,5 +50,32 @@
         <br>
         <a href="#">Request a demo</a>
     </div>
+
+    <script>
+
+        let x = document.getElementsByTagName('a');
+        let y = x[0];
+        y.addEventListener('mouseover', group);
+        y.addEventListener('mouseout', group);
+        let body = document.body;
+        function group() {
+            if(y.innerHTML == "Request a Demo?") {
+                y.innerHTML = "Request a Demo";
+                y.style.backgroundColor = "#f44336";
+                body.style.background = 'url("assets/garud-linux-wallpaper.jpg")';
+                body.style.backgroundRepeat = "no-repeat";
+                body.style.backgroundSize = "cover";
+            }
+            else {
+                y.innerHTML = "Request a Demo?";
+                y.style.backgroundColor = "blue";
+                body.style.background = 'url("assets/Ghost.jpg")';
+                body.style.backgroundRepeat = "no-repeat";
+                body.style.backgroundSize = "cover";
+            }
+        }
+
+    </script>
+
 </body>
 </html>
